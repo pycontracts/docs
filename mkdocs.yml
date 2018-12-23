@@ -1,0 +1,3 @@
+site_name: BitcoinPy Documentation
+theme:
+  name: 'rtd-dropdown'

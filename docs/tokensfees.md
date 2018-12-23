@@ -1,0 +1,11 @@
+# Tokens and Fees
+
+#### The GAS Token
+
+The GAS token, just as the BTC, is stored on the Bitcoin blockchain. It is needed to pay for the execution of the Python based smart contracts. More specifically, each opcode that is executed inside the Python virtual machine, costs currently 100 GAS satoshi, which translates to 0.000001 GAS. The denomination of 1 GAS into GAS satoshi is equal to the BTC denomination. Additionally to the opcodes, each byte either printed to the console or stored in the contract's permanent memory costs additional 100 GAS satoshi. GAS, that is used by the contracts, goes to the GAS miners. At this point it is worth to mention, that certain operators (such as the exponentiation or the modulus operator) internally consist of loops that repeatetly run multiple opcodes. This can cause to bump up the GAS costs quickly.
+
+The maximum possible supply of GAS is 3141592 GAS: miners are getting a certain amount of GAS which is decreasing as the time goes by. After the last GAS has been mined, the miners' rewards are limited to the GAS fees, that were acumulated since the last "mine gas" transaction. 
+
+#### Transaction Fees
+
+GAS tokens are used as a "fee", or "fuel", for the execution of contracts. However, since we are operating on the Bitcoin blockchain, we still need to pay a small network relay fee. That means, in order to use BitcoinPy contracts, you need a small amount of BTC to broadcast things into the Bitcoin network, and GAS to actually fuel the execution of the smart contracts. While this may sound complicated at first, we made sure that the BitcoinQt GUI handles most of the hassle for you without you even noticing.
