@@ -1,4 +1,5 @@
 #!/bin/bash
+rm -rf site_live
 cp -r site site_live
 cd site_live
 git init
